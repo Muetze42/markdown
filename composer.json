@@ -1,0 +1,18 @@
+{
+    "name": "norman-huth/markdown",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NormanHuth\\Markdown\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Norman Huth",
+            "homepage": "https://huth.it"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    }
+}
