@@ -255,6 +255,8 @@ class Table
      */
     public function render(): string
     {
+        $this->cells = array_map(fn ($item) => str_replace('|', '\\|', $item), $this->cells);
+        $this->rows = array_map(fn ($item) => str_replace('|', '\\|', $item), $this->rows);
         $this->setLengths();
         $this->renderHeading();
         $this->renderRows();
