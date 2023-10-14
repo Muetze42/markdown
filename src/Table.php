@@ -169,14 +169,14 @@ class Table
         $this->cellCount = count($this->cells);
 
         foreach ($this->cells as $key => $value) {
-            $this->lengths[$key] = strlen($value['title']);
+            $this->lengths[$key] = mb_strlen($value['title']);
         }
 
         foreach ($this->rows as $row) {
             $row = array_values($row);
             foreach ($row as $key => $value) {
                 $current = data_get($this->lengths, $key, 0);
-                $length = strlen($value);
+                $length = mb_strlen($value);
                 if ($current && $length > data_get($this->lengths, $key)) {
                     $this->lengths[$key] = $length;
                 }
